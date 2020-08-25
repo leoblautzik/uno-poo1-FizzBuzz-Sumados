@@ -1,5 +1,4 @@
 #include<stdio.h>
-
 int gauss(int);
 
 int main(){
@@ -8,11 +7,9 @@ int main(){
         printf("%d\n", gauss(i));
 
 }
-
 int gauss(int n){
     if(n==1)
         return 1;
     else
         return n+gauss(n-1);
 }
-

@@ -1,19 +1,28 @@
 public class FizzBuzz{
 
-	public static void main(String[] args){
+	private Integer entero;
 
-		for(int i=1;i<=20;i++){
-			if(i%3==0 && i%5 != 0)
-				System.out.println("Fizz");
-			else
-				if(i%3!=0 && i%5 ==0)
-					System.out.println("Buzz");
-				else
-					if(i%3==0 && i%5 ==0)
-						System.out.println("FizzBuzz");
-					else 
-						System.out.println(i);
-		}
-
+	public FizzBuzz(int e){
+		this.entero=e;
 	}
-}				
+
+	public String toString(){
+
+		if(this.entero%3==0 &&  this.entero%5 != 0)
+			return "Fizz";
+
+		if(this.entero%3!=0 && this.entero%5 ==0)
+			return "Buzz";
+
+		if(this.entero%3==0 && this.entero%5 ==0)
+			return "FizzBuzz";
+
+		return entero.toString();
+	}
+
+	public static void main(String[] args){
+		for (int i=0; i<100 ;i++ ) {
+			System.out.println(new FizzBuzz(i));
+		}
+	}
+}
