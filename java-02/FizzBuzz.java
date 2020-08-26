@@ -3,7 +3,7 @@ public class FizzBuzz{
 	private Integer entero;
 
 	public FizzBuzz(int e){
-		this.entero=e;
+		this.entero = e;
 	}
 
 	public String toString(){

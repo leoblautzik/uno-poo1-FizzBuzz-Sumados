@@ -1,7 +1,6 @@
 public class FizzBuzz{
 
-    public void fizzBuzz(){
-
+    public void fizzBuzzA(){
         for(int i=1;i<=20;i++){
             if(i%3==0 && i%5 != 0)
                 System.out.println("Fizz");
@@ -14,12 +13,55 @@ public class FizzBuzz{
                     else
                         System.out.println(i);
         }
-
     }
+
+    public void fizzBuzzB(){
+        for(int i=1;i<=20;i++){
+            if(i%15==0)
+                System.out.println("FizzBuzz");
+            else if(i%3==0)
+                System.out.println("Fizz");
+            else if(i%5==0)
+                System.out.println("Buzz");
+            else
+                System.out.println(i);
+        }
+    }
+
+    public void fizzBuzzC(){
+        String fizzy;
+        Integer i;
+        for(i=1;i<=20;i++){
+            if(i%15!=0)
+                if(i%3==0)
+                    fizzy="Fizz";
+                else if (i%5==0)
+                    fizzy="Buzz";
+                else fizzy=i.toString();
+            else
+                fizzy="FizzBuzz";
+            System.out.println(fizzy);
+        }
+    }
+
+    public void fizzBuzzOpT(){
+        Integer i;
+        for( i=1; i<=100; i++){
+            System.out.println((i%15==0) ? "FizzBuzz" : (i%3==0) ? "Fizz" : (i%5==0) ? "Buzz" : i.toString());
+        }
+    }
+    
+    public void fizzBuzzOpTcool(){
+               
+        for(int i=1; i<=100; i++){
+            boolean fi = (i%3==0), bu = (i%5==0);
+            System.out.println(fi ? bu ? "FizzBuzz" : "Fizz" : bu ? "Buzz" : i);
+        }
+    }
+
     public static void main(String[] args){
         FizzBuzz fb = new FizzBuzz();
-        fb.fizzBuzz();
-
+        fb.fizzBuzzC();
     }
 }
 
