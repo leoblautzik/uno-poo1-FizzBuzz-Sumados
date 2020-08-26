@@ -45,15 +45,13 @@ public class FizzBuzz{
     }
 
     public void fizzBuzzOpT(){
-        Integer i;
-        for( i=1; i<=100; i++){
-            System.out.println((i%15==0) ? "FizzBuzz" : (i%3==0) ? "Fizz" : (i%5==0) ? "Buzz" : i.toString());
+        for(int i=1; i<=20; i++){
+            System.out.println((i%15==0) ? "FizzBuzz" : (i%3==0) ? "Fizz" : (i%5==0) ? "Buzz" : i);
         }
     }
     
     public void fizzBuzzOpTcool(){
-               
-        for(int i=1; i<=100; i++){
+        for(int i=1; i<=20; i++){
             boolean fi = (i%3==0), bu = (i%5==0);
             System.out.println(fi ? bu ? "FizzBuzz" : "Fizz" : bu ? "Buzz" : i);
         }
@@ -61,7 +59,15 @@ public class FizzBuzz{
 
     public static void main(String[] args){
         FizzBuzz fb = new FizzBuzz();
+        fb.fizzBuzzA();
+        System.out.println("------------------------------------");
+        fb.fizzBuzzB();
+        System.out.println("------------------------------------");
         fb.fizzBuzzC();
+        System.out.println("------------------------------------");
+        fb.fizzBuzzOpT();
+        System.out.println("------------------------------------");
+        fb.fizzBuzzOpTcool();
     }
 }
 
