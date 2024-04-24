@@ -32,8 +32,8 @@ public class FizzBuzz{
         String fizzy;
         Integer i;
         for(i=1;i<=20;i++){
-            if(i%15!=0)
-                if(i%3==0)
+            if(i % 15 != 0)
+                if(i % 3 == 0)
                     fizzy="Fizz";
                 else if (i%5==0)
                     fizzy="Buzz";
@@ -44,12 +44,17 @@ public class FizzBuzz{
         }
     }
 
+
+
     public void fizzBuzzOpT(){
         for(int i=1; i<=20; i++){
             System.out.println((i%15==0) ? "FizzBuzz" : (i%3==0) ? "Fizz" : (i%5==0) ? "Buzz" : i);
         }
     }
     
+
+
+
     public void fizzBuzzOpTcool(){
         for(int i=1; i<=20; i++){
             boolean fi = (i%3==0), bu = (i%5==0);
